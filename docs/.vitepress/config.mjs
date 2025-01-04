@@ -4,7 +4,7 @@ const { getSideBar } = utils
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: "/istudy/", // 项目根路由，github部署后的基础路由如:xx.github.io/charlie-blog/
+  base: "/istudy/", // 项目根路由，github部署后的基础路由如:xx.github.io/istudy/
   // 站点级选项
   title: "isStudy", // 浏览器标签 title
   // 网站头部logo，不是浏览器的小logo

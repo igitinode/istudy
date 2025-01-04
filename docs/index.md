@@ -7,7 +7,7 @@ hero: # banner 部分
   text: "vitepress + vue3 personal bolg" #副标题
   tagline: My great project tagline #内容区
   image: #图片区
-    src: /public/logo.png # 图片加载位置
+    src: /logo.png # 图片加载位置
     alt: "加载失败" # 图片加载失败提示语
   actions: # 按钮区域
     - theme: brand # todo:这个字段的值有哪些
