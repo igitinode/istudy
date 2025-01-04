@@ -14,7 +14,7 @@ export default defineConfig({
       {
         rel: "icon",
         type: "image/svg+xml",
-        href: "/public/websiteLogo.svg",
+        href: "/websiteLogo.svg",
       },
     ],
   ],
@@ -24,7 +24,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     // 主题级选项
-    logo: "/public/websiteLogo.svg", // 站点标题前的icon。 会覆盖head的 href
+    logo: "/websiteLogo.svg", // 站点标题前的icon。 会覆盖head的 href
     outline: "deep", // 文章目录显示方式，deep为完整显示，false不显示，[1,3]显示1-3级
     nav: [
       { text: "Home", link: "/" },
