@@ -3,6 +3,7 @@ import utils from "./utils.mjs"
 const { getSideBar } = utils
 
 import { sidebarGuide } from "./sidebarGuide.mjs"
+import { sidebarReference } from "./sidebarReference.mjs"
 
 export const theme = defineConfig({
   themeConfig: {
@@ -25,6 +26,7 @@ export const theme = defineConfig({
     // 侧边栏是文档的主要导航块
     sidebar: {
       "/guide/": { base: "/guide/", items: sidebarGuide() },
+      "/reference/": { base: "/reference/", items: sidebarReference() },
     },
 
     // 本地搜索
@@ -54,7 +56,22 @@ export const theme = defineConfig({
 
 // 顶部导航栏菜单
 function nav() {
+  /* prettier-ignore */
   return [
     { text: "指南", link: "/guide/what-is-vitepress", activeMatch: "/guide/" },
+    { text: "参考", link: "/reference/site-config", activeMatch: "/reference/" },
+    {
+      text: "1.5.0", // pkg.version 首页导航有下拉菜单
+      items: [
+        {
+          text: "更新日志",
+          link: "https://github.com/vuejs/vitepress/blob/main/CHANGELOG.md",
+        },
+        {
+          text: "参与贡献",
+          link: "https://github.com/vuejs/vitepress/blob/main/.github/contributing.md",
+        },
+      ],
+    },
   ]
 }
