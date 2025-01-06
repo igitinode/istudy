@@ -2,6 +2,8 @@ import { defineConfig } from "vitepress"
 import utils from "./utils.mjs"
 const { getSideBar } = utils
 
+import { sidebarGuide } from "./sidebarGuide.mjs"
+
 export const theme = defineConfig({
   themeConfig: {
     // 导航栏上显示的 Logo，位于站点标题前。
@@ -22,10 +24,7 @@ export const theme = defineConfig({
 
     // 侧边栏是文档的主要导航块
     sidebar: {
-      "/guid/": {},
-      "/front/": getSideBar("front"),
-      "/back/": getSideBar("back"),
-      "/others": getSideBar("others"),
+      "/guide/": { base: "/guide/", items: sidebarGuide() },
     },
 
     // 本地搜索
@@ -56,10 +55,6 @@ export const theme = defineConfig({
 // 顶部导航栏菜单
 function nav() {
   return [
-    { text: "Home", link: "/" },
-    { text: "Examples", link: "/markdown-examples" },
-    { text: "Front-end", link: "/front/engi/rule", activeMatch: "/front/" },
-    { text: "Back-end", link: "/back/index", activeMatch: "/back/" },
-    { text: "Others", link: "/others/operation/md", activeMatch: "/others/" },
+    { text: "指南", link: "/guide/what-is-vitepress", activeMatch: "/guide/" },
   ]
 }
