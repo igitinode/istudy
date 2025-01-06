@@ -12,5 +12,16 @@ export const sidebarGuide = () => {
         { text: "部署", link: "deploy" },
       ],
     },
+    {
+      text: '写作',
+      collapsed: false,
+      items: [
+        { text: 'Markdown 扩展', link: 'markdown' },
+        { text: '资源处理', link: 'asset-handling' },
+        { text: 'frontmatter', link: 'frontmatter' },
+        { text: '在 Markdown 使用 Vue', link: 'using-vue' },
+        { text: '国际化', link: 'i18n' }
+      ]
+    },
   ]
 }
