@@ -11,13 +11,22 @@ export default defineConfig({
   // 站点级选项
   title: "isStudy", // 浏览器标签 title
   // 网站头部logo，不是浏览器的小logo
+  // 将 favicon.ico 放在公共目录中，如果设置了 base，则使用 /base/favicon.ico
   head: [
     [
       "link",
       {
         rel: "icon",
         type: "image/svg+xml",
-        href: "/websiteLogo.svg",
+        href: "/istudy/vitepress-logo-mini.svg",
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        href: "/istudy/vitepress-logo-mini.png",
       },
     ],
   ],
@@ -27,7 +36,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     // 主题级选项
-    logo: "/websiteLogo.svg", // 站点标题前的icon。 会覆盖head的 href
+    logo: "/vitepress-logo-mini.svg", // 站点标题前的icon。 会覆盖head的 href
     outline: "deep", // 文章目录显示方式，deep为完整显示，false不显示，[1,3]显示1-3级
     nav: [
       { text: "Home", link: "/" },
