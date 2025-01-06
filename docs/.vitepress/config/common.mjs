@@ -12,7 +12,7 @@ export const common = defineConfig({
   // 将 favicon.ico 放在公共目录中，如果设置了 base，则使用 /base/favicon.ico
   // 不用检查格式
   /* prettier-ignore */
-  head: [ 
+  head: [
     [ "link", { rel: "icon", type: "image/svg+xml", href: "/istudy/vitepress-logo-mini.svg", }],
     [ "link", { rel: "icon", type: "image/png", href: "/istudy/vitepress-logo-mini.png", }],
     // 添加元数据
@@ -35,4 +35,7 @@ export const common = defineConfig({
   // 当设置为 true 时，将页面元数据提取到单独的 JavaScript 块中，而不是内联在初始 HTML 中。
   // 这使每个页面的 HTML 负载更小，并使页面元数据可缓存，从而当站点中有很多页面时可以减少服务器带宽。
   metaChunk: true,
+
+  // 当设置为 true 时，VitePress 不会因为死链而导致构建失败。
+  ignoreDeadLinks: true
 })
