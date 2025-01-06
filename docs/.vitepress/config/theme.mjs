@@ -1,6 +1,8 @@
 import { defineConfig } from "vitepress"
-import utils from "./utils.mjs"
-const { getSideBar } = utils
+import { createRequire } from 'module'
+
+const require = createRequire(import.meta.url)
+const pkg = require('../../../package.json')
 
 import { sidebarGuide } from "./sidebarGuide.mjs"
 import { sidebarReference } from "./sidebarReference.mjs"
@@ -61,7 +63,7 @@ function nav() {
     { text: "指南", link: "/guide/what-is-vitepress", activeMatch: "/guide/" },
     { text: "参考", link: "/reference/site-config", activeMatch: "/reference/" },
     {
-      text: "1.5.0", // pkg.version 首页导航有下拉菜单
+      text: pkg.version, // 首页导航有下拉菜单
       items: [
         {
           text: "更新日志",
