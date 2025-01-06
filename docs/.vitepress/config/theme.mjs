@@ -15,12 +15,18 @@ export const theme = defineConfig({
     // 在导航栏中展示带有图标的社交帐户链接。
     /* prettier-ignore */
     socialLinks: [
-    { icon: "github", link: "https://github.com/igitinode" },
-    { icon: 'twitter', link: '...' }
-  ],
+      { icon: "github", link: "https://github.com/igitinode" },
+      { icon: 'twitter', link: '...' }
+    ],
 
-    // 文章目录显示方式，deep为完整显示，false不显示，[1,3]显示1-3级
-    outline: "deep",
+    // 文章右侧目录显示方式，deep为完整显示
+    // 将此值设置为 outline:false 可禁止渲染大纲容器。
+    outline: {
+      level: 'deep',
+      // 显示在 outline 上的标题。
+      label: '页面导航'
+
+    },
 
     // 导航菜单项的配置
     nav: nav(),
@@ -38,18 +44,38 @@ export const theme = defineConfig({
 
     // 自定义 lastUpdated
     lastUpdated: {
-      text: "Updated at",
+      text: '最后更新于',
       formatOptions: {
-        dateStyle: "full",
-        timeStyle: "medium",
-      },
+        dateStyle: 'short',
+        timeStyle: 'medium'
+      }
+    },
+
+    // 编辑链接让你可以显示一个链接，以在 GitHub 或 GitLab 等 Git 管理服务上编辑页面。要启用它
+    editLink: {
+      pattern: 'https://github.com/igitinode/istudy/edit/main/docs/:path',
+      text: '在 GitHub 上编辑此页面'
     },
 
     // 页脚配置。可以添加 message 和 copyright。由于设计原因，仅当页面不包含侧边栏时才会显示页脚。
     footer: {
-      message: "本站所有内容均为原创，转载请注明出处",
-      copyright: "Copyright © 2024-present iStudy",
+      message: "基于 MIT 许可发布",
+      copyright: `版权所有 © 2024-${new Date().getFullYear()} 听雨君`,
     },
+
+    // 自定义出现在上一页和下一页链接上方的文本。也可用于全局/局部禁用上一页/下一页链接。
+    docFooter: {
+      prev: '上一页',
+      next: '下一页'
+    },
+
+    langMenuLabel: '多语言',
+    returnToTopLabel: '回到顶部',
+    sidebarMenuLabel: '菜单',
+    darkModeSwitchLabel: '主题',
+    lightModeSwitchTitle: '切换到浅色模式',
+    darkModeSwitchTitle: '切换到深色模式',
+    skipToContentLabel: '跳转到内容'
 
     // 内置了对 Carbon Ads 的原生支持
     // carbonAds: { code: "", placement: "" },
