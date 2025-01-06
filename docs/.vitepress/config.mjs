@@ -2,6 +2,9 @@ import { defineConfig } from "vitepress"
 import utils from "./utils.mjs"
 const { getSideBar } = utils
 
+import { shared } from "./shared.mjs"
+console.log(shared)
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: "/istudy/", // 项目根路由，github部署后的基础路由如:xx.github.io/istudy/
