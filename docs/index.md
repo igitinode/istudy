@@ -1,23 +1,23 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
-layout: home # 声明当前页面的模块结构为首页，默认为 page
+layout: home # 声明当前页面的模块结构为首页，默认为 page。其他子页面就可以引用
 
 title: istudy
 titleTemplate: 学习永远在路上
 
 hero: # banner 部分
-  name: "首页Vitepress" # 主标题
-  text: "vitepress + vue3 personal bolg" #副标题
-  tagline: My great project tagline #内容区
-  image: #图片区
+  name: 学习永远在路上 # 主标题
+  text: 积跬步、积小流 # 副标题
+  tagline: 纸上得来终觉浅，绝知此事要躬行 # 内容区
+  image: # 图片区
     src: /logo.png # 图片加载位置
-    alt: "加载失败" # 图片加载失败提示语
+    alt: 加载失败 # 图片加载失败提示语
   actions: # 按钮区域
-    - theme: brand # todo:这个字段的值有哪些
-      text: Markdown Examples # 按钮文案
+    - theme: brand #  按钮的颜色主题，brand(默认) | alt
+      text: Markdown 案例 # 按钮文案
       link: /markdown-examples # 跳转连接，以 docs 为根路径
     - theme: alt
-      text: API Examples # 按钮文案
+      text: API 接口 # 按钮文案
       link: /api-examples # 跳转连接，以 docs 为根路径
 
 features: # 功能区
